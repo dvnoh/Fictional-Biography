@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: 'stark', sans-serif;
+}
+
+.active {
+  border-radius: 20px;
+  position: relative;
+  animation: glow 1s ease-in-out reverse;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-color: red;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0px 0px rgb(0, 0, 0);
+  }
+
+  to {
+    box-shadow: 0 0 5px 2px rgb(255, 63, 63);
+  }
+}
+
+nav {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+nav ul {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  padding: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+main {
+  background-image: url("./Assets/Lab.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10vh;
+  min-height: 100vh;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin: 5rem;
+  padding: 3rem;
+  height: 90%;
+  width: 90%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  margin: 20px;
+  width: 250px;
+  height: auto;
+  float: left;
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  img {
+    float: none;
+  }
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
